@@ -1240,6 +1240,7 @@ aten_native_source_non_codegen_list = [
     "aten/src/ATen/native/quantized/cpu/qlinear_prepack.cpp",
     "aten/src/ATen/native/quantized/cpu/LinearUnpackImpl.cpp",
     "aten/src/ATen/native/quantized/cpu/qmatmul.cpp",
+    "aten/src/ATen/native/quantized/cpu/quantized_roll.cpp",
     "aten/src/ATen/native/quantized/cpu/qmul.cpp",
     "aten/src/ATen/native/quantized/cpu/qnormalization.cpp",
     "aten/src/ATen/native/quantized/cpu/Pooling.cpp",

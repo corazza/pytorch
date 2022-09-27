@@ -5275,6 +5275,12 @@
     CUDA: roll_cuda
   autogen: roll.out
 
+- func: quantized_roll(Tensor self, int[1] shifts, int[1] dims=[]) -> Tensor
+  variants: function, method
+  dispatch:
+    QuantizedCPU: quantized_roll
+  autogen: quantized_roll.out
+
 # default int[] value [0,1] should not add space after comma, since codegen parser uses ', ' to split args
 
 - func: rot90(Tensor self, int k=1, int[] dims=[0,1]) -> Tensor
