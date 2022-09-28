@@ -192,7 +192,7 @@ TORCH_LIBRARY(quantized, m) {
   m.def(TORCH_SELECTIVE_SCHEMA("quantized::softmax(Tensor qx, int dim, float output_scale, int output_zero_point) -> Tensor"));
   
   // VT
-  m.def(TORCH_SELECTIVE_SCHEMA("quantized::quantized_roll(Tensor self, int[1] shifts, int[1] dims=[]) -> Tensor"));
+  m.def(TORCH_SELECTIVE_SCHEMA("quantized::roll(Tensor self, int[1] shifts, int[1] dims=[]) -> Tensor"));
 }
 
 // According to #33294: The "_" prefix registration will be

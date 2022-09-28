@@ -5273,13 +5273,14 @@
   dispatch:
     CPU: roll_cpu
     CUDA: roll_cuda
+    QuantizedCPU: quantized_roll
   autogen: roll.out
 
-- func: quantized_roll(Tensor self, int[1] shifts, int[1] dims=[]) -> Tensor
-  variants: function, method
-  dispatch:
-    QuantizedCPU: quantized_roll
-  autogen: quantized_roll.out
+# - func: quantized_roll(Tensor self, int[1] shifts, int[1] dims=[]) -> Tensor
+#   variants: function, method
+#   dispatch:
+#     QuantizedCPU: quantized_roll
+#   autogen: quantized_roll.out
 
 # default int[] value [0,1] should not add space after comma, since codegen parser uses ', ' to split args
 

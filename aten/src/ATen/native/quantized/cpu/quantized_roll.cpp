@@ -9,7 +9,6 @@
 namespace at {
 namespace native {
 
-// namespace {
 
 inline void check_inputs(const Tensor& qa) {
   TORCH_CHECK(
@@ -43,11 +42,13 @@ Tensor quantized_roll(const Tensor& self,  c10::ArrayRef<long> shifts, c10::Arra
   return at::cat({t0, t1}, dim);
 }
 
+namespace {
+
 TORCH_LIBRARY_IMPL(quantized, QuantizedCPU, m) {
-  m.impl(TORCH_SELECTIVE_NAME("quantized::quantized_roll"), TORCH_FN(quantized_roll));
+  m.impl(TORCH_SELECTIVE_NAME("quantized::roll"), TORCH_FN(quantized_roll));
 }
 
-// } // namespace
+} // namespace
 
 } // namespace native
 } // namespace at
